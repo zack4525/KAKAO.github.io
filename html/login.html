@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lonin</title>
+  <script src="../libr/kakao.js"></script>
+</head>
+<body>
+  <a href="javascript:kakaoLogin();"><img src="../images/kakao_login_small.png" /></a>
+
+
+
+  <script>
+    window.Kakao.init('ba3fcb9004437321604851f977d2f996');
+
+    function kakaoLogin() {
+      window.Kakao.Auth.login({
+        scope: ' profile, account_email, gender',
+        success : function(authObj){
+          console.log(authObj);
+          window.Kakao.API.request({
+            url:'/v2/user/me',
+            success : res => {
+              const kakao_account = res.kakao_account;
+              console.log(kakao_account);
+            }
+          });
+        }
+      })
+      
+    }
+
+
+  </script>
+</body>
+</html>

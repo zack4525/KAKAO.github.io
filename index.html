@@ -1,0 +1,104 @@
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shorcut icon" href="./images/K파비콘.png">
+    <link rel="icon" href="./images/K파비콘.png">
+
+    <title> KAKAO</title>
+
+    <link rel="stylesheet" href="./libr/jquery-ui.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <script type='text/javascript' src="./libr/jquery-3.5.1.min.js"></script>
+    <script src="/libr/kakao.js"></script>
+    <script src="./script/script.js"></script>
+
+
+</head>
+<body>
+    <input type="checkbox" id="menuicon">
+
+    <header id = "header">
+        
+        <a href="index.html" id="kakao_logo_Left_Top"><span><img src="./images/kakao_logo_brown_185_47.png" alt=""></span></a>
+            <div class="menu-items"> 
+                <div id="weather" class="amolrang">
+                <div id ="weather_local"></div> 
+                <div id ="weather_now"></div> 
+                </div>
+                <!-- <button onclick="katalk()"><img src="./images/menu_icon_40_40.png"></button> -->
+                <div id="login" class="amolrang"><a href="./html/login.html"><img src="./images/kakao_login_medium.png" alt=""></a></div>
+                <div class="amolrang" id=munu>
+                    <label for="menuicon" class="menubtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+            </div> 
+    </header>
+    
+
+    <input type="checkbox" id="kaTalk">
+    <input type="checkbox" id="musicPlayer">
+<div class="container">
+    <div class="sidebar">
+        <div><label for="kaTalk"><img src="./images/menuIcon/kakao_talk.png"></label></div>
+        <div><a href="./html/calendar.html" target="_blank"><img src="./images/menuIcon/pngwing.com (1).png"></a></div>
+        <div><a href="mailto:zack4525@gmail.com"><img src="./images/menuIcon/mail_color_36_36.png"></a></div>
+        <div><label for="musicPlayer"><img src="./images/menuIcon/melon.jpg"></label></div>
+        <div><a href="https://page.kakao.com/main" target = "_blank"><img src="./images/menuIcon/kakao_page_yelloew_back.gif"></a></div>
+        <div><a href="https://www.kakaogamescorp.com/" target = "_blank"><img src="./images/menuIcon/games.jpg"></a></div>
+        <div><a href="https://www.kakaobank.com/" target = "_blank"><img src="./images/menuIcon/bank.png"></a></div>
+        <div><a href="https://www.kakaopay.com/main" target = "_blank"><img src="./images/menuIcon/kakao_pay.png"></a></div>
+        <div><a href="https://map.kakao.com/" target="_blank"><img src="./images/menuIcon/kakao_map.png"></a></div>
+
+    </div>
+    
+    <div id="search_box">
+        <div id="seach_box_top_logo"><img src="./images/Kakao_logo_yellow_227_69.png" id=main_logo></div>
+        <form action="search">
+            <input type="text" method="post" id="searchCss">
+            <button><img src="./images/search_icon_yellow_40_40.png" ></button>
+        </form>
+    </div>
+    <div class="kakaoTalk" id="kakaoTalk">
+    <div class="jstalktheme" id="jstalktheme_test" style="width: 320px; height: 480px;">
+
+        <div class="msg">
+        </div>
+        
+        <div class="sendmsg">
+            <textarea class="textarea" id="jstalktheme_testmsg" onkeypress="if(event.keyCode==13){ jstalktheme_testfunc(); this.value=''; return false; }else if(event.keyCode==10){ this.value+='\n'; }"></textarea>
+            <div class="button" onclick="jstalktheme_testfunc()">
+                <p>전송</p>
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="music_box">
+    <div id="player"></div>
+    <div id="music-state"></div>
+        <button onclick="listMenu()" ><img src="./images/menuIcon/music/재생목록.png" alt=""> </button>
+        <button onclick="previousVideo()" ><img src="./images/menuIcon/music/이전.png" alt=""> </button>
+        <button onclick="playVideo()" ><img src="./images/menuIcon/music/재생.png" alt=""> </button>
+        <button onclick="pauseVideo()" ><img src="./images/menuIcon/music/일시정지.png" alt=""> </button>
+        <button onclick="stopVideo()"><img src="./images/menuIcon/music/정지.png" > </button>
+        <button onclick="nextVideo()" ><img src="./images/menuIcon/music/다음.png" alt=""> </button>
+    <div id="playlist" style="display: inline;">
+        <ul class="music_list" id="music_list" ></ul>
+        <button onclick="addMusic()"><img src="./images/menuIcon/music/추가.png" style="margin-left: 50px; margin-bottom: 10px;" ></button>
+        <button onclick="startAddMusic()"><img src="./images/menuIcon/music/적용.png" style="margin-left: 100px; margin-bottom: 10px;"> </button>
+    </div>
+</div>
+
+
+    <footer id="footer" class="footer">
+        <img src="/images/kakao_friend_900_180.jpg" alt="">
+    
+    </footer> 
+</div>
+</body>
+</html>
